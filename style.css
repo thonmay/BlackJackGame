@@ -1,0 +1,84 @@
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    position: relative; /* For the overlay */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+  }
+  
+  /* Blurred background approach */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("blackjackbgimg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(0.2px); /* Adjust the blur amount as needed */
+    z-index: -1;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 2.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    color: rgba(226, 220, 24, 0.918);
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  /* Button styling */
+button {
+    border: 1px solid rgba(0, 0, 0, 0.347);
+    padding: 10px 0;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 80%;
+    max-width: 200px;
+    margin: 10px auto;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: block;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+
+  button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+
+#start {
+    background: linear-gradient(to right, #1489aa, #06d1b9);
+  }
