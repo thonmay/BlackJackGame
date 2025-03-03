@@ -39,7 +39,7 @@
     margin-bottom: 2.2rem;
     font-family: 'Courier New', Courier, monospace;
     font-size: 2.5rem;
-    color: rgba(226, 220, 24, 0.918);
+    color: goldenrod;
   }
 
   p {
@@ -54,15 +54,15 @@
 button {
     border: 1px solid rgba(0, 0, 0, 0.347);
     padding: 10px 0;
-    color: black;
+    color: rgb(222, 178, 66);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     width: 80%;
     max-width: 200px;
     margin: 10px auto;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: block;
     transition: all 0.2s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -80,5 +80,49 @@ button {
 
 
 #start {
-    background: linear-gradient(to right, #1489aa, #06d1b9);
+    background: linear-gradient(to right, #104554, #035047b6);
   }
+
+  #new-card {
+    background: linear-gradient(to right, #104554, #035047b6);
+  }
+
+  /* Celebrate of Lose Effect */
+.confetti {
+    position: fixed;
+    top: -10px;
+    pointer-events: none;
+    z-index: 1000;
+    animation: confettiFall linear forwards;
+    border-radius: 50%;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.shake-animation {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.celebrate-animation {
+    animation: pulse 0.5s ease-in-out 3;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
