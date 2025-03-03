@@ -20,8 +20,15 @@ function getRandomCard() {
 function startGame()
 {
     isAlive = true;
+    hasBlackJack = false;
     cards = [getRandomCard(), getRandomCard()];
     renderGame();
+}
+
+function resetGame()
+{
+    cards = [];
+    startGame();
 }
 
 
