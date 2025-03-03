@@ -35,17 +35,22 @@ body::before {
 
 h1 {
   text-align: center;
-  margin-top: 5vh;
-  margin-bottom: 2.5rem;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2.5rem;
   color: goldenrod;
   font-weight: bolder;
 }
+h2 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  color: goldenrod;
+  font-weight: bold;
+}
 
 p {
   text-align: center;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5rem;
   color: white;
@@ -60,8 +65,8 @@ button {
   font-weight: bold;
   width: 80%;
   max-width: 200px;
+  border-radius: 6px;
   margin: 10px auto;
-  border-radius: 10px;
   cursor: pointer;
   font-size: 1.3rem;
   display: block;
@@ -79,13 +84,19 @@ button:active {
   transform: scale(0.98);
 }
 
-
 #start-btn {
   background: linear-gradient(to right, #104554, #035047b6);
 }
 
 #new-card-btn {
   background: linear-gradient(to right, #104554, #035047b6);
+  display: inline;
+  margin-right: 1rem;
+}
+
+#stand-btn {
+  background: linear-gradient(to right, #104554, #035047b6);
+  display: inline;
 }
 
 
@@ -96,10 +107,17 @@ button:active {
   margin-bottom: 1rem;
 }
 
+#dealer-cardEl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 /* Cards styling */
 
 .card-img {
-  height: 150px;
+  height: 10rem;
   margin-right: 3vw;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);

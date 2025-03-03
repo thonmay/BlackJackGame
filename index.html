@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Jack</title>
+    <title>Black Jack Casino Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
 
         <div id="game-container">
-            <h1>Black Jack</h1>
-        <p id="msgEl">Wanna play a game of Black Jack?</p>
-        <p id="cardEl"></p>
-        <p id="sumEl"></p>
-        
-        <button id="start-btn" onclick="startGame()">Start Game</button>
-        <button id="new-card-btn" onclick="newCard()">New Card</button>
+            <h1>Black Jack Game</h1>
+            <p id="msgEl">Wanna play a game of Black Jack?</p>
+            <h2></h2>
+            <p id="dealersCardEl"></p>
+            <p id="dealerSumEl"></p>
+            <h2></h2>
+            <p id="playersCardEl"></p>
+            <p id="playerSumEl"></p>
+            
+            <button id="start-btn" onclick="startGame()">Start Game</button>
+            <button id="new-card-btn" onclick="newCard()">Hit</button>
+            <button id="stand-btn">Stand</button>
         </div>
         
 
