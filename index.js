@@ -68,10 +68,8 @@ function startGame()
     hasBlackJack = false;
     deck = shuffleDeck(createDeck());
     playerCards = [getRandomCard(), getRandomCard()];
-    console.log(playerCards);
     renderGame();
     startBtn.style.visibility = 'hidden';
-    sumEl.innerHTML = "";
 }
 
 function resetGame()
@@ -79,6 +77,7 @@ function resetGame()
     cards = [];
     cardEl.innerHTML = "";
     startBtn.style.visibility = 'visible';
+    sumEl.textContent = "";
 }
 
 
@@ -92,7 +91,6 @@ function renderGame() {
     });
     
     sum = playerCards.reduce( (total, card) => total + (["Jack", "Queen", "King", "Ace"].includes(card.value) ? 10 : card.value), 0);
-    console.log(playerCards.join(", "));
     if(sum <= 20) {
         message = "Do you want to draw a new card?🙂 ";
     } else if (sum === 21) {
@@ -107,7 +105,6 @@ function renderGame() {
         isAlive = false;
         showFailure();
         setTimeout(resetGame, 2000);
-        //resetGame();
     }
     //cardEl.textContent = "Cards: " + cards.join(" ");
     sumEl.textContent = "Sum: " + sum;
