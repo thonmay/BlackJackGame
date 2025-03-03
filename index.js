@@ -9,9 +9,11 @@ const msgEl = document.getElementById("msgEl");
 const cardEl = document.getElementById("cardEl");
 const sumEl = document.getElementById("sumEl");
 const gameContainer = document.getElementById("game-container");
+const startBtn = document.getElementById("start-btn");
 
 //Initial Message
 msgEl.textContent = "Wanna play a game of Black Jack?";
+startBtn.style.visibility = 'visible';
 
 function getRandomCard() {
     return Math.floor(Math.random() * 10 + 2);   //A card between 2 and 11
@@ -23,12 +25,13 @@ function startGame()
     hasBlackJack = false;
     cards = [getRandomCard(), getRandomCard()];
     renderGame();
+    startBtn.style.visibility = 'hidden';
 }
 
 function resetGame()
 {
     cards = [];
-    startGame();
+    startBtn.style.visibility = 'visible';
 }
 
 
@@ -43,10 +46,13 @@ function renderGame() {
         hasBlackJack = true;
         isAlive = false;
         celebrateWin();
+        resetGame();
     } else {
         message = "You're out of the game!😒";
         isAlive = false;
         showFailure();
+        setTimeout(resetGame, 1000);
+        //resetGame();
     }
     cardEl.textContent = "Cards: " + cards.join(" ");
     sumEl.textContent = "Sum: " + sum;

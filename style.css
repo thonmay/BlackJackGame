@@ -79,11 +79,11 @@ button {
   }
 
 
-#start {
+#start-btn {
     background: linear-gradient(to right, #104554, #035047b6);
   }
 
-  #new-card {
+  #new-card-btn {
     background: linear-gradient(to right, #104554, #035047b6);
   }
 
